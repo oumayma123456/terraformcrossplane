@@ -27,8 +27,8 @@ spec:
           mfa_delete = false
         }
 
-        object_lock_configuration {
-          object_lock_enabled = "Enabled"
+        object_lock_enabled = true
+        object_lock_configuration = {
 
           rule {
             default_retention {
