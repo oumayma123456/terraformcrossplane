@@ -27,13 +27,13 @@ spec:
           mfa_delete = false
         }
 
-        object_lock_enabled = true
-
         object_lock_configuration {
+          object_lock_enabled = true
+
           rule {
             default_retention {
-              mode = "GOVERNANCE"
-              days = 1
+              mode  = "GOVERNANCE"
+              days  = 1
             }
           }
         }
