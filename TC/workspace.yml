@@ -61,4 +61,4 @@ spec:
       }
 
   providerConfigRef:
-    name: default
+    name: default-unique
