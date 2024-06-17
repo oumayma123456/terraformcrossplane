@@ -63,6 +63,4 @@ spec:
   providerConfigRef:
     name: default-unique
 
-  writeConnectionSecretToRef:
-    namespace: default
-    name: terraform-workspace-example-workspace
+
