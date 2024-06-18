@@ -8,8 +8,6 @@ spec:
     module: |
       provider "aws" {
         region = "us-east-2"
-        alias = "alternative" 
-        shared_credentials_files = ["/home/vagrant/aws-credentials.txt"] 
       }
 
       resource "random_pet" "this" {
