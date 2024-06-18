@@ -56,5 +56,6 @@ spec:
       output "bucket_arn" {
         value = aws_s3_bucket.example_bucket.arn
       }
+
   providerConfigRef:
-    name: aws-provider-config
+    name: aws-s3
