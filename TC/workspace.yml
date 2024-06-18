@@ -24,8 +24,8 @@ spec:
         }
 
         object_lock_configuration {
-          object_lock_enabled = "Enabled" 
-          }
+          object_lock_enabled = "Enabled"
+          
 
           rule {
             default_retention {
