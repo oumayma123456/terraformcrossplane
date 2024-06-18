@@ -7,7 +7,7 @@ spec:
     source: Inline
     module: |
       provider "aws" {
-        region = "us-east-2"
+        region = "us-east-2"  
       }
 
       resource "random_pet" "this" {
@@ -61,6 +61,4 @@ spec:
       }
 
   providerConfigRef:
-    name: default-unique
-
-
+    name: aws-provider-config  
