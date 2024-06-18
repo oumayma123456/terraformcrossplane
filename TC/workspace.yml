@@ -12,11 +12,6 @@ spec:
       }
 
       resource "aws_s3_bucket" "example_bucket" {
-        bucket = "s3-bucket-11ou"  
-        acl    = "private"
-      }
-
-      resource "aws_s3_bucket" "example_bucket" {
         bucket = local.bucket_name
         acl    = "private"
 
