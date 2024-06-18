@@ -6,8 +6,21 @@ spec:
   forProvider:
     source: Inline
     module: |
+      provider "aws" {
+        region = "us-east-2"
+        alias = "alternative"  
+      }
+
+      resource "random_pet" "this" {
+        length = 2
+      }
+
+      locals {
+        bucket_name = "s3-bucket-${random_pet.this.id}"
+      }
+
       resource "aws_s3_bucket" "example_bucket" {
-        bucket = "my-unique-bucket-1" 
+        bucket = local.bucket_name
         acl    = "private"
 
         versioning {
@@ -15,7 +28,6 @@ spec:
           mfa_delete = false
         }
 
-        
         object_lock_configuration {
           object_lock_enabled = true
 
@@ -27,7 +39,6 @@ spec:
           }
         }
 
-        
         lifecycle_rule {
           id      = "simple-rule"
           enabled = true
@@ -51,4 +62,4 @@ spec:
       }
 
   providerConfigRef:
-    name: aws-provider-config
+    name: aws-provider-config  
