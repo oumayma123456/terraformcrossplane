@@ -58,4 +58,4 @@ spec:
       }
 
   providerConfigRef:
-    name: aws-provider-config  
+    name: aws-s3 
