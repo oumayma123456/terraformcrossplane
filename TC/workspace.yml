@@ -9,6 +9,7 @@ spec:
       provider "aws" {
         region = "us-east-2"
         alias  = "alternative"
+        shared_credentials_file = "/home/vagrant/aws-credentials.txt"
       }
 
       locals {
