@@ -2,6 +2,7 @@ apiVersion: tf.upbound.io/v1beta1
 kind: Workspace
 metadata:
   name: example-workspace
+  
 spec:
   forProvider:
     source: Inline
@@ -59,4 +60,4 @@ spec:
       }
 
   providerConfigRef:
-    name: aws-s3-provider1
+    name: aws-s3-provider3
